@@ -1,0 +1,624 @@
+/*Slideshow*/
+/*@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+65% { left: -200%; }
+70% { left: -300%; }
+85% { left: -300%; }
+100% { left: -400%; }
+}
+
+
+div#slider { overflow: hidden; }
+div#slider figure img {width: 20%;}
+div#slider figure {
+  position: relative;
+  z-index:1;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 30s slidy infinite;
+}
+I will add this sildeshow later
+.fronttext {
+    z-index:2;
+    color:white;
+    font-size:20vw;
+    text-align:center;
+    position:absolute;
+    width:100%;
+}
+
+I will add this sildeshow later*/
+body {
+  font-family:"Verdana";
+}
+
+img {
+  max-width:100%;
+}
+html {
+background-image: url(stripedbg.png);
+background-size: stretch;
+background-repeat: repeat;
+}
+
+h1 {
+  font-family: Helvetica;
+}
+h2 {
+  font-family: Helvetica;
+}
+h3 {
+  font-family: Helvetica;
+}
+
+.faq ul {
+  border: 2px black solid;
+  width: 50%;
+}
+header {
+    grid-area:header;
+    background:rgba(255,255,255,0.7);
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    border:#ff590f 1px solid;
+}
+header p{
+  font-family: Helvetica;
+  font-size: 20px;
+  text-shadow: -2px -2px #ff590f;
+  padding-bottom:0px;
+}
+header h1 {
+  text-shadow: 2px 2px #ffffff;
+}
+aside a {
+  color:#FFFFFF;
+}
+aside a :hover {
+  color:#000000;
+}
+
+.logohead {
+  grid-area:Logohead;
+  align-items:center;
+  height:15vmax;
+  margin-left:10%;
+}
+
+.onecall{
+ display:grid;
+ font-family:"monospace";
+}
+.headerwrapper {
+  display:grid;
+  justify-items:center;
+  align-items:center;
+  grid-template-columns:33% auto;
+  grid-template-areas:
+  "Logohead 1Call";
+}
+.box {
+  grid-area:box;
+}
+nav {
+    background:#ff590f;
+    font-size:125%;
+    grid-area:nav;
+    text-align: center;
+    }
+.slidy {
+  grid-area: slidy;
+}
+main {
+  grid-area: main;
+  background-color:white;
+  padding: 20px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+main p{
+  margin:20px;
+  font-size:20px;
+  text-align:left;
+}
+
+main h1{
+  padding-left:20px;
+  padding-top:0px;
+  color:#288dbe;
+}
+.solarpanels {
+  height: 200px;
+  margin-left: 10px;
+}
+.servbg {
+  display:grid;
+  justify-items:center;
+  align-items:center;
+  grid-template-columns:50% auto;
+  grid-template-areas:
+  "servopt servplan";
+  background:#ffffff;
+  text-align:left;
+}
+.servopt {
+  grid-area:servopt;
+  width:90%;
+  height: 85%;
+  border-radius: 10px;
+  color: #FFFFFF;
+}
+.servplan {
+  grid-area:servplan;
+  width:90%;
+  height: 85%;
+  border-radius: 10px;
+  color: #FFFFFF;
+}
+aside {
+  grid-area:aside;
+  padding:0;
+  padding: 10px;
+  background:#288dbe;
+}
+aside h3 {
+  Font-size:30px;
+}
+.givingback {
+  grid-area:givingback;
+  padding:0;
+  padding: 10px;
+  background:#e1cd58;
+}
+
+.contactjoe {
+  grid-area:contactjoe;
+  background: #D3D3D3;
+  padding: 10px;
+}
+.contactjoe img {
+  height:15vmax;
+  text-align: center;
+}
+.contactjoe p{
+  margin:20px;
+  font-size:20px;
+  text-align:left;
+}
+.contactjoe h3{
+  margin:15px;
+  font-size:20px;
+  color:#288dbe;
+}
+figcaption {
+  background: #D3D3D3;
+}
+figcaption p {
+  background: #D3D3D3;
+  margin: 5px;
+}
+.org1 {
+  grid-area: org1;
+  display:grid;
+  justify-items:center;
+  align-items:center;
+  grid-template-columns:25% 1fr;
+  grid-template-areas:
+  "ronaldimg ronald";
+  background:#288dbe;
+  border-radius: 5px;
+  margin-top:5px;
+  padding:10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.org2 {
+  grid-area: org2;
+  display:grid;
+  justify-items:center;
+  align-items:center;
+  width: 95%;
+  margin:auto;
+  grid-template-columns:25% 1fr;
+  grid-template-areas:
+  "goodwillimg goodwill";
+  
+  background:#288dbe;
+  border-radius: 5px;
+  margin-top:5px;
+  margin-bottom:5px;
+  padding:10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.orgbg {
+  background:white;
+  grid-area: orgbg;
+  display:grid;
+  justify-items:center;
+  align-items:center;
+  grid-template-columns:1fr;
+  grid-template-areas:
+  "org1"
+  "org2";
+}
+
+.ronald {
+  grid-area: ronald;
+  padding:12px;
+  padding-top:0px;
+  color:white;
+}
+.ronaldimg {
+  grid-area: ronaldimg;
+}
+.goodwill {
+  grid-area: goodwill;
+  padding:12px;
+  padding-top:0px;
+  color:white;
+
+}
+.goodwillimg {
+  grid-area: goodwillimg;
+
+}
+.Basic {
+  grid-area:Basic;
+  background:#288dbe;
+  padding: 10px;
+  Color:#ffffff;
+  text-align:center;
+}
+.Advantage {
+  grid-area:Advantage;
+  background:#F09334;
+  padding: 10px;
+  Color:#ffffff;
+  text-align:center;
+  
+}
+.HVACHealth {
+  grid-area:HVACHealth;
+  background:#ff590f;
+  padding: 10px;
+  Color:#ffffff;
+  text-align:center;
+}
+footer {
+  grid-area: footer;
+  background-color:#ff590f;
+  text-align:Center;
+  padding: 10px;
+  border-bottom-right-radius:5px;
+  border-bottom-left-radius:5px;
+}
+.footerwrapper {
+  display:grid;
+  justify-items:center;
+  align-items:center;
+  grid-template-columns:1fr 1fr;
+  grid-template-areas:
+  "footercr footerinfo";
+}
+.footercr {
+  grid-area: footercr;
+  
+}
+.footerinfo {
+  grid-area: footerinfo;
+}
+footer p {
+ color: #FFFFFF;
+}
+/*This stuff is to make my navigation go horizontal on full screen*/
+.first {
+    grid-area:first;
+
+}
+
+.second {
+    grid-area:second;
+}
+
+.third {
+    grid-area:third;
+}
+
+.fourth {
+    grid-area:fourth;
+}
+
+.fifth {
+    grid-area:fifth;
+}
+
+
+/*---------------------------Mobile Layout----------------------------*/
+.maincon {
+  display: grid;
+  grid-gap:0em;
+  width:100%;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "aside"
+    "contactjoe"
+    "givingback"
+    "footer";
+    }
+.aboutcon {
+  display: grid;
+  grid-gap:0em;
+  width:100%;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "figcaption"
+    "givingback"
+    "footer";
+    }
+.givebackcon {
+  display: grid;
+  grid-gap:0em;
+  width:100%;
+  grid-template-columns: 100%;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "orgbg"
+    "footer";
+    }
+    
+  .servbg {
+  display:grid;
+  justify-items:center;
+  align-items:center;
+  grid-template-columns:100%;
+  grid-template-areas:
+  "servopt"
+  "servplan";
+  background:#ffffff;
+  text-align:center;
+  }
+  
+.plancon {
+  display: grid;
+  grid-gap:0em;
+  width:100%;
+  grid-template-columns: 100%;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "Basic"
+    "Advantage"
+    "HVACHealth"
+    "givingback"
+    "footer";
+    }
+#navwrapper {
+    display:grid;
+    grid-template-areas:
+    "first"
+    "second"
+    "third"
+    "fourth"
+    "fifth";
+    }
+/*This stuff is for the hamburger menu*/
+.toggleNav {
+    text-align:center;
+    display:grid; /*This is what allows the hamburger icon and "Menu" to display*/
+    }
+
+#flex-nav ul {
+    display: none; /*jQuery toggles the nav from to this class to the .open when clicked*/
+    text-align:center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+ 
+#flex-nav ul.open { /*.open is the class that gets toggled when clicked (with help from the jQuery code)*/
+    display:grid;
+    }
+    
+#flex-nav li {
+    padding-left:10px;
+    padding-top:10px;
+    }
+
+#flex-nav a {
+    color:white;
+    text-decoration:none;
+    }
+
+#flex-nav a:hover {
+    color: #288dbe;
+    }
+
+
+/*-----------------------Tablet Media Query------------------------*/
+@media only screen and (min-width: 480px)  {
+.maincon { /*for index.html*/
+  display: grid;
+  margin: auto;
+  grid-gap:0em;
+  margin:auto;
+  grid-template-columns: 80% 1fr;
+  grid-template-areas:
+  "header header"
+  "nav nav"
+  "main aside"
+  "contactjoe givingback"
+  "footer footer";
+}
+.aboutcon {
+  display: grid;
+  margin: auto;
+  width: 100%;
+  grid-gap:0em;
+  grid-template-columns: 50% 1fr;
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "figcaption main"
+    "givingback givingback"
+    "footer footer";
+    }
+.givebackcon {
+  display: grid;
+  grid-gap:0em;
+  width:100%;
+  margin:auto;
+  grid-template-columns: 50% auto;
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "main main"
+    "orgbg orgbg"
+    "footer footer";
+    }
+.servbg {
+  display:grid;
+  justify-items:center;
+  align-items:center;
+  grid-template-columns:50% auto;
+  grid-template-areas:
+  "servopt servplan";
+  background:#ffffff;
+  text-align:left;
+}
+.plancon {
+  display: grid;
+  grid-gap:0em;
+  width:100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "main main main"
+    "Basic Advantage HVACHealth"
+    "givingback givingback givingback"
+    "footer footer footer";
+    }
+}
+
+/*-----------------------Desktop Media Query------------------------*/
+@media only screen and (min-width: 960px)  {
+
+.maincon {
+  display: grid;
+  margin:auto;
+  width: 85%;
+  grid-gap:0em;
+  grid-template-columns: 80% 1fr;
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "main aside"
+    "contactjoe givingback"
+    "footer footer";
+    }
+    
+.aboutcon {
+  display: grid;
+  grid-gap:0em;
+  width:85%;
+  margin:auto;
+  grid-template-columns: 50% auto;
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "figcaption main"
+    "givingback givingback"
+    "footer footer";
+    }
+.givebackcon {
+  display: grid;
+  grid-gap:0em;
+  width:85%;
+  margin:auto;
+  grid-template-columns: 50% auto;
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "main main"
+    "orgbg orgbg"
+    "footer footer";
+    }
+.servicecon {
+  display: grid;
+  grid-gap:0em;
+  width:85%;
+  margin:auto;
+  grid-template-columns:auto;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "servbg"
+    "givingback"
+    "footer";
+    }
+.servbg {
+  display:grid;
+  justify-items:center;
+  align-items:center;
+  grid-template-columns:50% auto;
+  grid-template-areas:
+  "servopt servplan";
+  background:#ffffff;
+  text-align:left;
+}
+.plancon {
+  display: grid;
+  grid-gap:0em;
+  width:85%;
+  margin:auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "main main main"
+    "Basic Advantage HVACHealth"
+    "givingback givingback givingback"
+    "footer footer footer";
+    }
+#navwrapper {
+  margin:25px;
+  display:grid;
+  grid-template-areas:
+  "first second third fourth fifth"; /*this is to make each menu option appear in one row*/
+    }
+    /* Below will change from hamburger menu to side navigation*/
+  
+.toggleNav {
+    display: none; /*Makes the hamburger icon with the word "Menu" to disappear at this screen size*/
+    text-align:center;
+    font-size:1.5em;
+    font-weight:bold;
+    padding:10px;
+  }
+  
+#flex-nav ul {
+    display:grid;
+    text-align:left;
+  }
+.first {
+      margin-left:2.5em;
+}
+}
