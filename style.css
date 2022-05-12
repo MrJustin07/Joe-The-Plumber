@@ -128,7 +128,18 @@ main p{
   font-size:20px;
   text-align:left;
 }
-
+.formcontact {
+  background-color:#288dbe;
+  padding:10px;
+  text-align:center;
+  color:white;
+  border-radius:5px;
+}
+.contactdetails {
+  font-size:15px;
+  font-family:"monospace";
+  padding:10px;
+}
 main h1{
   padding-left:20px;
   padding-top:0px;
